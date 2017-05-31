@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+
+<configuration>
+	<!-- 进行mybatis 配置 -->
+	<typeAliases>
+		<!-- 为类型 起了别名 -->
+		<typeAlias type="com.yy.utils.PageInfo" alias="PageInfo"/>
+
+        <typeAlias type="com.yy.model.User" alias="User"/>
+        <typeAlias type="com.yy.vo.UserVo" alias="UserVo"/>
+
+        <typeAlias type="com.yy.model.Resource" alias="Resource"/>
+        <typeAlias type="com.yy.model.Role" alias="Role"/>
+        <typeAlias type="com.yy.model.Organization" alias="Organization"/>
+        <typeAlias type="com.yy.model.SysLog" alias="SysLog"/>
+	</typeAliases>
+	
+	<!-- 引入自定义 mapper 文件 -->
+	<mappers>
+		<!-- 从库测试 -->
+		<mapper resource="sqlMapperXml/SlaveMapper.xml"/>
+
+        <mapper resource="sqlMapperXml/OrganizationMapper.xml"/>
+        <mapper resource="sqlMapperXml/UserMapper.xml"/>
+        <mapper resource="sqlMapperXml/ResourceMapper.xml"/>
+        <mapper resource="sqlMapperXml/RoleMapper.xml"/>
+        <mapper resource="sqlMapperXml/UserRoleMapper.xml"/>
+        <mapper resource="sqlMapperXml/RoleResourceMapper.xml"/>
+        <mapper resource="sqlMapperXml/SysLogMapper.xml"/>
+	</mappers>
+</configuration>
+        
